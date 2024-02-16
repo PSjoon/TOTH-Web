@@ -1,12 +1,11 @@
 {
   "name": "nextjs",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "server": "tsx watch ./app/src/server.ts",
-    "build": "npm install && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
