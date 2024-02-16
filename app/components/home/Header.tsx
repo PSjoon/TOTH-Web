@@ -15,7 +15,7 @@ export function Header() {
               <Image src={tothLogo} alt='logo' className='w-52'></Image>
             </div>
             <Link href={'/criar'}>
-              <p className='text-lg bg-gray-800 hover:bg-gray-500 transition-all ease-in-out rounded-md p-1'>
+              <p className='text-lg bg-gray-800 bg-opacity-70 transition-all ease-in-out rounded-md p-1 '>
                 Criar Artigo
               </p>
             </Link>
@@ -23,17 +23,17 @@ export function Header() {
 
           <div className='flex items-center justify-end gap-6'>
             <Link href={'https://www.linkedin.com/in/pedrosantosjoon/'}>
-              <FaLinkedin className='w-6 h-6' />
+              <FaLinkedin className='w-6 h-6 hover:text-orange-500' />
             </Link>
 
             <Link href={'https://github.com/PSjoon'}>
-              <FaGithub className='w-6 h-6' />
+              <FaGithub className='w-6 h-6 hover:text-orange-500' />
             </Link>
 
             <Link
               href={'https://github.com/PSjoon/TOTH-posting-system'}
               target='__blank'>
-              <p className='bg-gray-800 hover:bg-gray-500 transition-all ease-in-out rounded-md p-1'>
+              <p className='text-lg bg-gray-800 bg-opacity-70 transition-all ease-in-out rounded-md p-1 '>
                 Repositório
               </p>
             </Link>
