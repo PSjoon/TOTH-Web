@@ -24,7 +24,11 @@ export function HeaderMobile() {
         </button>
 
         <div className='py-4'>
-          <Image src={tothLogo} alt='logo' className='w-52'></Image>
+          <Image
+            src={tothLogo}
+            priority={true}
+            alt='logo'
+            className='w-52'></Image>
         </div>
       </div>
       <Transition

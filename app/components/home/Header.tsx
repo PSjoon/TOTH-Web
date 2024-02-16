@@ -12,7 +12,11 @@ export function Header() {
         <div className='w-full hidden md:flex justify-between'>
           <div className='flex items-center justify-start gap-16'>
             <div className='py-4'>
-              <Image src={tothLogo} alt='logo' className='w-52'></Image>
+              <Image
+                src={tothLogo}
+                priority={true}
+                alt='logo'
+                className='w-52'></Image>
             </div>
             <Link href={'/criar'}>
               <p className='text-lg bg-gray-800 bg-opacity-70 transition-all ease-in-out rounded-md p-1 '>
