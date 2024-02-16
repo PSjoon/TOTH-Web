@@ -10,21 +10,21 @@ dotenv.config({ path: '.env' })
 dotenv.config({})
 app.use(cors())
 
-const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3334
+// const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3334
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-createArticle(app)
-viewArticle(app)
+// createArticle(app)
+// viewArticle(app)
 
 app.get('/', () => {
   console.log('Hello world')
 })
 
 try {
-  app.listen(port, () => {
-    console.log(`Servidor iniciado na porta ${port}`)
+  app.listen(3333, () => {
+    console.log(`Servidor iniciado na porta 3333`)
   })
 } catch (error) {
   console.log(error)
