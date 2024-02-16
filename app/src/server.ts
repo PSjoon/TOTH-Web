@@ -18,6 +18,10 @@ app.use(bodyParser.json())
 createArticle(app)
 viewArticle(app)
 
+app.get('/', () => {
+  console.log('Hello world')
+})
+
 try {
   app.listen(port, () => {
     console.log(`Servidor iniciado na porta ${port}`)
