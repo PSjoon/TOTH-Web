@@ -1,28 +1,31 @@
 'use client'
 
-import { Metadata } from 'next'
+import { useState } from 'react'
 import { api } from '../../src/lib/api'
 
-// const metadata: Metadata = {
-//   title: 'Página de Criação',
-//   description: 'create post page',
-// }
+interface Article {
+  id: number
+  message: string
+}
 
 export default function Criar() {
+  const [article, setArticle] = useState<Article[]>([])
+
   const showArticle = async () => {
     const response = await api.get('/article')
 
-    try {
-      console.log(response.data)
-    } catch (error) {
-      console.log(error)
-    }
+    setArticle(response.data.artigos)
+    console.log(response.data.artigos)
   }
 
   return (
     <>
       <h1>Hello World</h1>
       <button onClick={showArticle}>Send</button>
+
+      {article.map((article) => {
+        return <p key={article.id}>{article.message}</p>
+      })}
     </>
   )
 }

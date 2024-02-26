@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@testing-library/jest-dom"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -28,7 +29,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/lib/authGoogle.ts"
+    "src/lib/authGoogle.ts",
+    "jest.config.js",
+    "jest.setup.js"
   ],
   "exclude": ["node_modules"]
 }
