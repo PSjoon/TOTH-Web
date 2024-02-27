@@ -13,6 +13,6 @@
 
 # Description
 
-In my graduation project at ETEC Bartolomeu Bueno da Silva, I created the web system TOTH along with my group. However, in 2023, it was not possible to publicly deploy the system for free due to the number of operations it performed. However, I am currently segmenting this project in order to make it public.
+In my graduation project at ETEC Bartolomeu Bueno da Silva, I created the web system TOTH along with my group. However, in 2023, it was not possible to publicly deploy the system for free due to the number of operations it performed. However, I'm currently segmenting this project in order to make it public.
 
 This repository contains the system for creating, viewing, interacting with, and posting.
