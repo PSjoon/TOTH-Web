@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Header } from '../app/components/home/Header'
+import { Header } from '../app/components/home/Headers/Header'
 
 describe('Header', () => {
   it('should show the name of the div: Repositorio', () => {
