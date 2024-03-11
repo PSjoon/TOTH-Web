@@ -34,9 +34,7 @@ export function Header() {
               <FaGithub className='w-6 h-6 hover:text-orange-500' />
             </Link>
 
-            <Link
-              href={'https://github.com/PSjoon/TOTH-posting-system'}
-              target='__blank'>
+            <Link href={'https://github.com/PSjoon/TOTH-Web'} target='__blank'>
               <p className='text-lg bg-gray-800 bg-opacity-70 transition-all ease-in-out rounded-md p-1 '>
                 Repositório
               </p>
