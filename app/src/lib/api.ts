@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: 'https://toth-posting-system.onrender.com/',
+  baseURL: 'https://toth-server.onrender.com',
 })
 
 // export const api = axios.create({
