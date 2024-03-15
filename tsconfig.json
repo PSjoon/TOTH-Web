@@ -32,7 +32,8 @@
     "src/lib/authGoogle.ts",
     "jest.config.js",
     "jest.setup.js",
-    "next.config.mjs"
+    "next.config.mjs",
+    "../TOTH-Server/api/externalLogin/authGoogle.ts"
   ],
   "exclude": ["node_modules"]
 }

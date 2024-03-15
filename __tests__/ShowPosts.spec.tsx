@@ -40,15 +40,15 @@ describe('Show articles', () => {
     render(<ShowResume />)
 
     const articleTitles = await screen.findAllByText(
-      /Impacto da Inteligência Artificial na Sociedade/i,
+      'Impacto da Inteligência Artificial na Sociedade',
     )
     expect(articleTitles.length).toBe(2)
 
-    const picture = await screen.findAllByText('Pedro Santos')
+    const picture = await screen.findAllByText('Pedro dos Santos Júnior')
     expect(picture.length).toBe(4)
 
     const altImage = await screen.findAllByAltText('Foto do Usuário')
 
-    expect(altImage.length).toBe(12)
+    expect(altImage.length).toBe(4)
   })
 })
