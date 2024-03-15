@@ -9,8 +9,6 @@ export async function GET(req: NextRequest) {
 
   const redirectTo = req.cookies.get('redirectTo')?.value
 
-  console.log(redirectTo)
-
   const registerResponse = await api.post('/githubauth', {
     code,
   })
