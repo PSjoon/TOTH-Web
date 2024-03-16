@@ -5,7 +5,7 @@ import {
   screen,
   waitFor,
 } from '@testing-library/react'
-import { ExternalLogin } from '../app/components/sign/externalLogin'
+import { ExternalLogin } from '../app/components/signin/externalLogin'
 
 describe('Header', () => {
   it('should show the name of the github login', () => {

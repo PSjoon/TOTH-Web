@@ -43,7 +43,7 @@ export function ShowResume() {
   }, [])
 
   return (
-    <div className='grid grid-cols-[3fr_1fr]'>
+    <div className='grid md:grid-cols-[3fr_1fr]'>
       <div className='h-[90vh] overflow-y-auto'>
         <h1 className='text-3xl px-6 pt-4 '>Artigos</h1>
         <InfiniteScroll
@@ -75,7 +75,7 @@ export function ShowResume() {
 
                   <Link href={`/perfil/${article.by}`} className='flex'>
                     <div
-                      className='w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[5vw] lg:h-[5vw] rounded-full bg-white-200 overflow-hidden'
+                      className='w-[8vw] md:w-[6vw] lg:w-[5vw] rounded-full overflow-hidden'
                       title='Acessar Perfil'>
                       <Image
                         src={article.profilePictures}
@@ -99,7 +99,8 @@ export function ShowResume() {
           </>
         </InfiniteScroll>
       </div>
-      <div className='h-[90vh] overflow-y-auto'>
+
+      <div className='h-[90vh] overflow-y-auto sm:hidden md:block'>
         <h1 className='text-2xl px-6 pt-4'>Novidades</h1>
         <InfiniteScroll
           dataLength={article.length}
@@ -124,23 +125,14 @@ export function ShowResume() {
                     </div>
                   </Link>
 
-                  <Link href={`/perfil/${article.by}`} className='flex'>
-                    <div
-                      className='w-[8vw] h-[8vw] md:w-[6vw] md:h-[6vw] lg:w-[4vw] lg:h-[4vw] rounded-full bg-white-200 overflow-hidden'
-                      title='Acessar Perfil'>
-                      <Image
-                        src={article.profilePictures}
-                        alt='Foto do Usuário'
-                        width={128}
-                        height={128}
-                      />
-                    </div>
+                  <Link href={`/perfil/${article.by}`}>
                     <div className='sm:text-sm md:text-md ml-4'>
                       <p title='Nome do Usuário'>{article.username}</p>
                       <p
                         className='italic text-orange-500'
                         title='Graduação do Usuário'>
                         {article.college[0]}
+                        UNICAMP
                       </p>
                     </div>
                   </Link>

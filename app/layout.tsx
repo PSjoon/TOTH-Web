@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className='overflow-y-hidden'>
+    <html lang='en'>
       <body className={nunito.className}>{children}</body>
     </html>
   )
