@@ -1,14 +1,14 @@
 'use client'
 
+import Cookies from 'js-cookie'
+import emailjs from '@emailjs/browser'
 import { useEffect, useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useRouter } from 'next/navigation'
-import Cookies from 'js-cookie'
 import { api } from '../../../src/lib/api'
-import error from 'next/error'
 import { ReturnCad } from './ReturnCad'
 
 const createUserFormSchema = z
@@ -54,12 +54,6 @@ export function LocalCadatro() {
   // send to BD
   const routes = useRouter()
 
-  // const jwtInFo = getUserJS()
-
-  // if (jwtInFo) {
-  //   routes.push('/error=userLogged')
-  // }
-
   async function createNewUser(data: any) {
     try {
       const response = await api.post('/cadastrar', {
@@ -73,8 +67,38 @@ export function LocalCadatro() {
       // console.log(response)
 
       const token = response.data.token
+      const user = response.data.user
 
       Cookies.set('token', token, { path: '/', expires: 30 })
+
+      const username = user.username
+      const email = user.email
+
+      const templateParams = {
+        to_name: username,
+        to_email: email,
+        from_name: 'TOTH',
+        message: 'nada',
+        email: 'pedro@example.com',
+      }
+
+      if (response) {
+        emailjs
+          .send(
+            'service_u24drvw', // service id
+            'template_yf7kb3o', // template id
+            templateParams,
+            'yhTgVWC_02Tj3kuUM',
+          )
+          .then(
+            () => {
+              console.log('enviado')
+            },
+            (err) => {
+              console.log('error', err)
+            },
+          )
+      }
 
       routes.push('/')
     } catch (error) {
