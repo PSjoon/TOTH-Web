@@ -5,9 +5,6 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const code = searchParams.get('code')
 
-  console.log(code)
-  console.log(1)
-
   const redirectTo = req.cookies.get('redirectTo')?.value
 
   const registerResponse = await api.post('/githubauth', {
