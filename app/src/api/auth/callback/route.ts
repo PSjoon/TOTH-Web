@@ -6,6 +6,7 @@ export async function GET(req: NextRequest) {
   const code = searchParams.get('code')
 
   console.log(code)
+  console.log(1)
 
   const redirectTo = req.cookies.get('redirectTo')?.value
 

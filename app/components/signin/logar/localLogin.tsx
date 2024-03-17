@@ -50,42 +50,13 @@ export function LocalLogin() {
         password: data.password,
       })
 
-      console.log(response.data.token)
-      console.log(response.data.user)
+      // console.log(response.data.token)
+      // console.log(response.data.user)
 
       const token = response.data.token
       const user = response.data.user
 
       Cookies.set('token', token, { path: '/', expires: 30 })
-
-      // const username = user.username
-      // const email = user.email
-
-      // const templateParams = {
-      //   to_name: username,
-      //   to_email: email,
-      //   from_name: 'TOTH',
-      //   message: 'nada',
-      //   email: 'pedro@example.com',
-      // }
-
-      // if (response) {
-      //   emailjs
-      //     .send(
-      //       'service_u24drvw', // service id
-      //       'template_yf7kb3o', // template id
-      //       templateParams,
-      //       'yhTgVWC_02Tj3kuUM',
-      //     )
-      //     .then(
-      //       () => {
-      //         console.log('enviado')
-      //       },
-      //       (err) => {
-      //         console.log('error', err)
-      //       },
-      //     )
-      // }
 
       routes.push('/')
     } catch (error) {

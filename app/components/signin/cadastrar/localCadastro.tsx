@@ -92,7 +92,7 @@ export function LocalCadatro() {
           )
           .then(
             () => {
-              console.log('enviado')
+              // console.log('enviado')
             },
             (err) => {
               console.log('error', err)
@@ -102,8 +102,7 @@ export function LocalCadatro() {
 
       routes.push('/')
     } catch (error) {
-      console.log(error)
-      console.log(2)
+      // console.log(error)
       window.location.search = 'error=userNotExisting'
     }
   }
